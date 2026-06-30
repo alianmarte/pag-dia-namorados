@@ -41,14 +41,6 @@ setInterval(() => {
 
 const audio = document.getElementById("audio");
 
-audio.addEventListener("loadedmetadata", () => {
-    console.log("Carregado!");
-});
-
-audio.addEventListener("error", (e) => {
-    console.log("Erro:", e);
-});
-
 audio.addEventListener("ended", () => {
     setTimeout(() => {
         audio.play();
