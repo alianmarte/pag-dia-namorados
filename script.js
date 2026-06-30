@@ -1,4 +1,4 @@
-const startDate = new Date("2026-02-23T00:00:00");
+const startDate = new Date("2026-02-23T21:30:00");
 
 function updateTimer() {
     const now = new Date();
@@ -18,6 +18,23 @@ function updateTimer() {
 }
 
 setInterval(updateTimer, 1000);
+updateTimer();
+
+const images = ["imgs/img1.jpg", "imgs/img2.jpg", "imgs/img4.jpg"];
+
+let current = 0;
+setInterval(() => {
+    current = (current + 1) % images.length;
+    document.getElementById("carousel-img").src = images[current];
+}, 5000);
+
+const audio = document.getElementById("audio");
+
+audio.addEventListener("ended", () => {
+    setTimeout(() => {
+        audio.play();
+    }, 3000);
+});
 
 setInterval(() => {
     const heart = document.createElement("div");
@@ -29,30 +46,11 @@ setInterval(() => {
     setTimeout(() => heart.remove(), 5000);
 }, 300);
 
-const images = [
-    "imgs/img1.jpg", "imgs/img2.jpg", "imgs/img4.jpg"
-];
-
-let current = 0;
-setInterval(() => {
-    current = (current + 1) % images.length;
-    document.getElementById("carousel-img").src = images[current];
-}, 3000);
-
-const audio = document.getElementById("audio");
+/* BOTÃO ENTRAR */
 const startScreen = document.getElementById("start-screen");
 const startBtn = document.getElementById("start-btn");
 
 startBtn.addEventListener("click", () => {
     startScreen.style.display = "none";
     audio.play();
-});
-
-audio.addEventListener("ended", () => {
-    setTimeout(() => {
-        audio.play();
-    }, 3000);
-
-
-
 });
