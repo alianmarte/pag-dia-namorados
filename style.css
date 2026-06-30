@@ -30,9 +30,7 @@ body {
     height: 500px;
     object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
-
 
 .love-time {
     text-align: center;
@@ -52,9 +50,9 @@ body {
     position: fixed;
     top: -20px;
     font-size: 24px;
-    animation: fall linear;
     pointer-events: none;
     z-index: 9999;
+    animation: fall linear;
 }
 
 @keyframes fall {
@@ -63,12 +61,14 @@ body {
         opacity: 0;
     }
 }
+
+/* START SCREEN */
 #start-screen {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: #000;
     display: flex;
     justify-content: center;
@@ -77,9 +77,9 @@ body {
 }
 
 #start-btn {
-    padding: 15px 30px;
-    font-size: 18px;
+    padding: 20px 40px;
+    font-size: 22px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
 }
