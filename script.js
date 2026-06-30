@@ -40,31 +40,19 @@ setInterval(() => {
 }, 3000);
 
 const audio = document.getElementById("audio");
+const startScreen = document.getElementById("start-screen");
+const startBtn = document.getElementById("start-btn");
+
+startBtn.addEventListener("click", () => {
+    startScreen.style.display = "none";
+    audio.play();
+});
 
 audio.addEventListener("ended", () => {
     setTimeout(() => {
         audio.play();
-    }, 5000);
+    }, 3000);
 
 
-#start-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
-}
 
-#start-btn {
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-        }
 });
