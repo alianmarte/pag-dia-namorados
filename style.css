@@ -96,7 +96,7 @@ html, body {
 }
 
 .main-text {
-    font-size: 56px;
+    font-size: 44px;
 }
 
 .love-time {
@@ -112,6 +112,11 @@ html, body {
     font-size: 26px;
 }
 
+
+.heart{
+    font-size: 44px;
+}
+
 .player strong {
     font-size: 28px;
-        }
+}
