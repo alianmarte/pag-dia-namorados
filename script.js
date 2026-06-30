@@ -31,8 +31,7 @@ setInterval(() => {
 
 const images = [
     "imgs/img1.jpg", "imgs/img2.jpg", "imgs/img3.jpg",
-    "imgs/img4.jpg", "imgs/img5.jpg", "imgs/img6.jpg",
-    "imgs/img7.jpg", "imgs/img8.jpg", "imgs/img9.jpg"
+    "imgs/img4.jpg"
 ];
 
 let current = 0;
